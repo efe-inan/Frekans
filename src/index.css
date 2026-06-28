@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-surface-container-lowest: #090f15;
+  --color-surface-container-low: #161c22;
+  --color-surface-container: #1a2027;
+  --color-surface-container-high: #252b31;
+  --color-surface-container-highest: #2f353c;
+  --color-on-surface: #dde3ec;
+  --color-on-surface-variant: #cac5cd;
+  --color-primary: #cdc2de;
+  --color-on-primary: #342d42;
+  --color-secondary: #ffb4a2;
+  --color-on-secondary: #611200;
+  
+  --color-brand-base: #3D364C;
+  --color-brand-cream: #E5D8C4;
+  --color-brand-coral: #E55F3D;
+  --color-brand-mustard: #D89A21;
+  --color-brand-slate: #7D838B;
+  --color-brand-stone: #B6B0A7;
+  
+  --color-score-outer: #77BAB7;
+  --color-score-mid: #1F857C;
+  --color-score-center: #5F0626;
+
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  background-color: var(--color-brand-base);
+  color: var(--color-brand-cream);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Utilities for Frekans */
+@layer utilities {
+  .cosmic-gradient {
+    background: radial-gradient(circle at top right, var(--color-brand-base) 0%, #0e141a 70%);
+  }
+  .glass-panel {
+    background: rgba(125, 131, 139, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(182, 176, 167, 0.1);
+  }
+}
+
